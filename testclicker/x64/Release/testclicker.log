@@ -1,0 +1,12 @@
+﻿  testclicker.cpp
+C:\Users\thorn\source\repos\testclicker\testclicker\Menu.h(27,17): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+C:\Users\thorn\source\repos\testclicker\testclicker\Menu.h(27,20): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+C:\Users\thorn\source\repos\testclicker\testclicker\testclicker.cpp(33,19): warning C4244: 'argument': conversion from 'float' to 'DWORD', possible loss of data
+C:\Users\thorn\source\repos\testclicker\testclicker\testclicker.cpp(35,19): warning C4244: 'argument': conversion from 'float' to 'DWORD', possible loss of data
+C:\Users\thorn\source\repos\testclicker\testclicker\testclicker.cpp(71,19): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+C:\Users\thorn\source\repos\testclicker\testclicker\testclicker.cpp(71,22): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 39 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  testclicker.vcxproj -> C:\Users\thorn\source\repos\testclicker\x64\Release\testclicker.exe

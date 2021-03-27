@@ -1,0 +1,7 @@
+﻿  testclicker.cpp
+C:\Users\thorn\source\repos\testclicker\testclicker\Menu.h(28,17): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+C:\Users\thorn\source\repos\testclicker\testclicker\Menu.h(28,20): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+C:\Users\thorn\source\repos\testclicker\testclicker\testclicker.cpp(31,20): warning C4244: 'argument': conversion from 'float' to 'DWORD', possible loss of data
+C:\Users\thorn\source\repos\testclicker\testclicker\testclicker.cpp(67,19): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+C:\Users\thorn\source\repos\testclicker\testclicker\testclicker.cpp(67,22): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+  testclicker.vcxproj -> C:\Users\thorn\source\repos\testclicker\Debug\testclicker.exe
