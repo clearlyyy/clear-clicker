@@ -13,7 +13,9 @@
 void SetCursorPosition(int x, int y);
 
 
-float random_float(float a, float b) // This function generates a random float within a range of values, a and b.
+float random_float(float a, float b) // This function generates a random float within a range of values,
+    
+    // instead of using rand(), this attempts to remove the bias that is usually associated with rand.
 {
     std::random_device rd;
     std::default_random_engine eng(rd());
@@ -22,7 +24,8 @@ float random_float(float a, float b) // This function generates a random float w
     return distr(eng);
 }
 
-void Clicker(float CPS, float minCPS, float maxCPS, bool toggled, bool lbutton_check, HWND hwnd)
+
+void Clicker(float CPS, float minCPS, float maxCPS, bool toggled, bool lbutton_check, HWND hwnd) //this function handles all of the clicking mechanisms.
 {
    
     while (toggled && GetAsyncKeyState(VK_LBUTTON))
@@ -40,7 +43,8 @@ void Clicker(float CPS, float minCPS, float maxCPS, bool toggled, bool lbutton_c
       
 }
 
-
+ //main() is where the program enters upon startup, this inits all variables, and sets default values for the user.
+ // 
 int main()
 {
     HWND minecraft = GetForegroundWindow();
@@ -66,6 +70,8 @@ int main()
 }
 
 void SetCursorPosition(int x, int y) // function is used to set cursor position on the console, so i can write to it.
+    //instead of rapidly refreshing the console every frame, im just setting a cursor position in the console and editing certain parts whenever
+    //i need to.
 {
     HANDLE output = GetStdHandle(STD_OUTPUT_HANDLE);
     COORD pos = { x, y };
