@@ -14,10 +14,11 @@
 #define CYN  "\x1B[36m"
 #define WHT  "\x1B[37m"
 
+// could've just shoved this class inside of testclicker.cpp.
 class Menu
 {
 public:
-	Menu(float& minCPS, float& maxCPS, bool toggled, bool& initbool)
+	Menu(float& minCPS, float& maxCPS, bool toggled, bool& initbool) // this inits everything and as soon as a "Menu" is created inside the code it will run print_menu()
 	{
 		this->print_menu(minCPS, maxCPS, toggled, initbool);
 	}
@@ -30,6 +31,7 @@ public:
 	//i should've used a fucking GUI.
 	void print_menu(float& minCPS, float& maxCPS, bool toggled, bool& initbool)
 	{
+		//this shit probably looks cryptic, but its just printing the menu.
 		printf("%s   ________                   _________      __            ", RED);
 		std::cout << "         Min CPS = " << minCPS << "\n";
 		printf("%s  / ____/ /__  ____ ______   / ____/ (_)____/ /_____  _____", GRN);
@@ -40,7 +42,7 @@ public:
 		if (toggled) { printf("%s [ ON ]\n", GRN); }
 		printf("%s/ /___/ /  __/ /_/ / /     / /___/ / / /__/ ,< /  __/ /    \n", BLU);
 		printf("%s\\____/_/\\___/\\__,_/_/      \\____/_/_/\\___/_/|_|\\___/_/     \n\n", MAG);	
-		if (initbool) {
+		if (initbool) { 
 			initbool = false;
 			printf("%sPlease choose your Min CPS: ", RED);
 			std::cin >> minCPS;
