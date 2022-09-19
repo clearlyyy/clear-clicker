@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <thread>
+#include "color.hpp"
 
 //Color shit for printf
 #define NRM  "\x1B[0m"
@@ -32,24 +33,25 @@ public:
 	void print_menu(float& minCPS, float& maxCPS, bool toggled, bool& initbool)
 	{
 		//this shit probably looks cryptic, but its just printing the menu.
-		printf("%s   ________                   _________      __            ", RED);
+		
+		std::cout << dye::red("   ________                   _________      __            ");
 		std::cout << "         Min CPS = " << minCPS << "\n";
-		printf("%s  / ____/ /__  ____ ______   / ____/ (_)____/ /_____  _____", GRN);
+		std::cout << dye::green("  / ____/ /__  ____ ______   / ____/(_)_____/ /_____  _____");
 		std::cout << "         Max CPS = " << maxCPS << "\n";                          
-		printf("%s / /   / / _ \\/ __ `/ ___/  / /   / / / ___/ //_/ _ \\/ ___/", YEL);
-		printf("%s         State = ", YEL);
-		if (!toggled) { printf("%s [ OFF ]\n", RED); }
-		if (toggled) { printf("%s [ ON ]\n", GRN); }
-		printf("%s/ /___/ /  __/ /_/ / /     / /___/ / / /__/ ,< /  __/ /    \n", BLU);
-		printf("%s\\____/_/\\___/\\__,_/_/      \\____/_/_/\\___/_/|_|\\___/_/     \n\n", MAG);	
+		std::cout << dye::yellow(" / /   / / _ \\/ __ `/ ___/  / /   / / / ___/ //_/ _ \\/ ___/");
+		std::cout << dye::yellow("         State = ");
+		if (!toggled) { std::cout << dye::red(" [ OFF ]\n"); }
+		if (toggled) { std::cout << dye::green(" [ ON ]\n"); }
+		std::cout << dye::blue("/ /___/ /  __/ /_/ / /     / /___/ / / /__/ ,< /  __/ /    \n");
+		std::cout << dye::purple("\\____/_/\\___/\\__,_/_/      \\____/_/_/\\___/_/|_|\\___/_/     \n\n");	
 		if (initbool) { 
 			initbool = false;
-			printf("%sPlease choose your Min CPS: ", RED);
+			std::cout << dye::red("Please choose your Min CPS: ");
 			std::cin >> minCPS;
 			SetCursorrPosition(0, 6);
 			std::cout << "                                          ";
 			SetCursorrPosition(0, 6);
-			printf("%sPlease choose your Max CPS: ", RED);
+			std::cout << dye::red("Please choose your Max CPS: ");
 			std::cin >> maxCPS;
 			SetCursorrPosition(0, 6);
 			std::cout << "                                          ";
