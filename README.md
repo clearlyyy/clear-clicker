@@ -5,3 +5,4 @@ Has support for Range Based Random CPS, Keybind is "F" to activate and deactivat
 ![Screenshot](testclicker/Clear-Clicker.PNG)
 
 This is only meant for learning purposes and shouldn't be used maliciously.
+This is not being worked on anymore.
